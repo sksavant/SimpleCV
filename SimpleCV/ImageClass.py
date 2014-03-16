@@ -9604,6 +9604,9 @@ class Image:
         if( isinstance(points,tuple) ):
             points = np.array(points)
 
+        if ( isinstance(points,list) ):
+            points = np.array(points)
+
         flags = 8
         if( fixed_range ):
             flags = flags+cv.CV_FLOODFILL_FIXED_RANGE
